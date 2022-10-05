@@ -4,12 +4,11 @@
 </script>
 
 <div id="content-conteiner">
-    <img src="./dist/not-finished.gif" alt="working gif">
+    <img src="./src/assets/working.gif" alt="working gif">
 </div>
   
   
-  <style>
-      
+  <style>    
     #content-conteiner{
       margin-top: 65px;
       display: flex;

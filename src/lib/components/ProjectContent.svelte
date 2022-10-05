@@ -12,7 +12,7 @@
     "Oslo. Applikasjonen er laget sammen med et team i faget \"IN2000 - Software Engineering med " +
     "prosjektarbeid\".", 
     descriptionExtended: "Sykkelbris inneholder funksjonalitet for å kunne se utvalgte sykkelruter i oslo omeråde med en beregning av luftkvalitet for ruten. Applikasjonen har også en modell som viser været inenfor en gitt periode og gir anbefalinger basert på det. Laget for android og kodet hovedsaklig i kotlin",
-    img:["./dist/sykkelbris_bilde.png", "./dist/sykkelbris_demo1.png", "./dist/sykkelbris_demo2.png", "./dist/sykkelbris_demo3.png"],
+    img:["./src/assets/sykkelbris.png", "./src/assets/sykkelbris_demo1.png", "./src/assets/sykkelbris_demo2.png", "./src/assets/sykkelbris_demo3.png"],
     },
 
 
@@ -20,7 +20,7 @@
     name: "Gravitasjon animasjon", 
     description:"Pygame basert animasjon for å simulere gravitasjon mellom planeter.", 
     descriptionExtended:"", 
-    img:["./dist/gravitasjon.JPG"],
+    img:["./src/assets/gravitasjon.JPG"],
     link:"https://github.com/Torkildef/Verdensrommet_sim"},
 
 
@@ -28,7 +28,7 @@
     name: "Labyrint", 
     description:"Program som bruker tråder og rekusjon for å finne en eller flere veier ut av en labyrint. Litt utvidet versjon av prosjekt i faget IN1010",
     descriptionExtended:"Programmet er skrevet i java med hjelp av java awt og swing.", 
-    img:["./dist/labyrintbilde.JPG"],
+    img:["./src/assets/labyrint.JPG"],
     link:"https://github.com/Torkildef/skoleprosjekter/tree/main/traa-labyrint"},
 
 
@@ -36,7 +36,7 @@
     name: "Parkeringsspill", 
     description:"Et spill hvor man skal parkere en beltevogn. ",
     descriptionExtended:"Parkeringspill startet på under forstegangstjenesten. Et hobbyprosjekt som var basert på min stilling som BV sjåfør.", 
-    img:["./dist/bv_spill.JPG"],
+    img:["./src/assets/bv_spill.JPG"],
     link:"https://github.com/Torkildef/BV-parking"},
     
   ];
@@ -65,7 +65,7 @@
       <div class="item-conteiner">
         <div class="title"><h4>...</h4></div>
         <div class="content" style="flex-direction:column; align-items:center;">
-          <img src="./dist/working2.gif" alt="working" style="height:200px; width:auto;">
+          <img src="./src/assets/working1.gif" alt="working" style="height:200px; width:auto;">
           <a href="https://github.com/Torkildef"><h3>GitHub</h3></a>
         </div>
       </div>
