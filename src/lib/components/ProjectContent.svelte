@@ -33,7 +33,7 @@
     name: "Parkeringsspill", 
     description:"Et spill hvor man skal parkere en beltevogn. Skrevet i python med bruk av pygame.",
     descriptionExtended:" Parkeringspill startet på under forstegangstjenesten. Et hobbyprosjekt som var basert på min stilling som BV sjåfør. Spillet går ut på å parkere beltevognen innenfor parkeringsplassen.", 
-    img:["bv_spill.JPG"],
+    img:["bv-spill.JPG"],
     link:"https://github.com/Torkildef/BV-parking"},
 
     {id: 5, 
