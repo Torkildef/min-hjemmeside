@@ -4,7 +4,7 @@
 </script>
 
 <div id="content-conteiner">
-    <img src="./src/assets/working.gif" alt="working gif">
+    <img src="https://raw.githubusercontent.com/Torkildef/min-hjemmeside/master/src/assets/working2.gif" alt="working gif">
 </div>
   
   

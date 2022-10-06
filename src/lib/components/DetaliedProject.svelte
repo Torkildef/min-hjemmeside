@@ -2,6 +2,7 @@
     export let currItem = null
     import {createEventDispatcher} from 'svelte';
 
+    let basesource = "https://raw.githubusercontent.com/Torkildef/min-hjemmeside/master/src/assets/"
 
     const dispatch = createEventDispatcher()
     
@@ -23,7 +24,7 @@
 
     <div id="img-conteiner">
         {#each currItem.img as x}
-            <img src={x} alt="{currItem.name}">
+            <img src={basesource + x} alt="{currItem.name}">
         {/each}
     </div>
     {#if currItem.link}

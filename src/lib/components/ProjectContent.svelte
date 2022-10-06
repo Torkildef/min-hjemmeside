@@ -1,9 +1,6 @@
 <script>
-    import DetaliedProject from "./DetaliedProject.svelte";
-
-
-
-
+  import DetaliedProject from "./DetaliedProject.svelte";
+  let basesource = "https://raw.githubusercontent.com/Torkildef/min-hjemmeside/master/src/assets/"
 
   let prevProjectList = [
     {id: 1, 
@@ -11,8 +8,8 @@
     description:"Sykkelbris er en applikasjon for sykelister i " + 
     "Oslo. Applikasjonen er laget sammen med et team i faget \"IN2000 - Software Engineering med " +
     "prosjektarbeid\".", 
-    descriptionExtended: "Sykkelbris inneholder funksjonalitet for å kunne se utvalgte sykkelruter i oslo omeråde med en beregning av luftkvalitet for ruten. Applikasjonen har også en modell som viser været inenfor en gitt periode og gir anbefalinger basert på det. Laget for android og kodet hovedsaklig i kotlin",
-    img:["./src/assets/sykkelbris.png", "./src/assets/sykkelbris_demo1.png", "./src/assets/sykkelbris_demo2.png", "./src/assets/sykkelbris_demo3.png"],
+    descriptionExtended: " Sykkelbris inneholder funksjonalitet for å kunne se utvalgte sykkelruter i oslo med en beregning av luftkvalitet for ruten. Applikasjonen har også en modell som viser været inenfor en gitt periode og gir anbefalinger basert på det. Laget for android og hovedsaklig skrevet i kotlin.",
+    img:["sykkelbris.png", "sykkelbris_demo.png", "sykkelbris_demo1.png", "sykkelbris_demo2.png", "sykkelbris_demo3.png"],
     },
 
 
@@ -20,24 +17,38 @@
     name: "Gravitasjon animasjon", 
     description:"Pygame basert animasjon for å simulere gravitasjon mellom planeter.", 
     descriptionExtended:"", 
-    img:["./src/assets/gravitasjon.JPG"],
+    img:["gravitasjon.JPG"],
     link:"https://github.com/Torkildef/Verdensrommet_sim"},
 
 
     {id: 3, 
     name: "Labyrint", 
-    description:"Program som bruker tråder og rekusjon for å finne en eller flere veier ut av en labyrint. Litt utvidet versjon av prosjekt i faget IN1010",
-    descriptionExtended:"Programmet er skrevet i java med hjelp av java awt og swing.", 
-    img:["./src/assets/labyrint.JPG"],
+    description:"Program som bruker tråder og rekusjon for å finne en eller flere veier ut av en labyrint. En utvidet versjon av prosjekt i faget IN1010.",
+    descriptionExtended:" Programmet er skrevet i java med hjelp av java awt og swing.", 
+    img:["labyrint.JPG"],
     link:"https://github.com/Torkildef/skoleprosjekter/tree/main/traa-labyrint"},
 
 
     {id: 4, 
     name: "Parkeringsspill", 
-    description:"Et spill hvor man skal parkere en beltevogn. ",
-    descriptionExtended:"Parkeringspill startet på under forstegangstjenesten. Et hobbyprosjekt som var basert på min stilling som BV sjåfør.", 
-    img:["./src/assets/bv_spill.JPG"],
+    description:"Et spill hvor man skal parkere en beltevogn. Skrevet i python med bruk av pygame.",
+    descriptionExtended:" Parkeringspill startet på under forstegangstjenesten. Et hobbyprosjekt som var basert på min stilling som BV sjåfør. Spillet går ut på å parkere beltevognen innenfor parkeringsplassen.", 
+    img:["bv_spill.JPG"],
     link:"https://github.com/Torkildef/BV-parking"},
+
+    {id: 5, 
+    name: "Ordspill", 
+    description:"Lite ordspill som ligner på hangman der programmet skal finne ut et ord på førrest mulig forsøk.",
+    descriptionExtended:" Programmet bruker en ordliste og itererer over den. Basert på input fra brukeren prøver algoritmen å gjette på bokstaven som det er minst sjanse for å gjette feil på.", 
+    img:["python-logo.png"],
+    link:"https://github.com/Torkildef/ordspill"},
+
+    {id: 5, 
+    name: "Medlingstjeneste", 
+    description:"Eksamensoppgave i faget IN2140 - Introduksjon til operativsystemer og datakommunikasjon. Programmet er en medlingstjeneste mellom klienter.",
+    descriptionExtended:" Består av klienter og en server der klientene bruker en server for å finne en annen klient å kominisere med. ", 
+    img:["c-logo.png"],
+    link:"https://github.com/Torkildef/skoleprosjekter/tree/main/meldingstjeneste"},
     
   ];
 
@@ -57,7 +68,7 @@
           <div class="title"><h4>{item.name}</h4></div>
           <div class="content">
             <p>{item.description}</p> 
-            <img src={item.img[0]} alt="{item.name}">
+            <img src={basesource + item.img[0]} alt="{item.name}">
           </div>
         </div>
     {/each}
@@ -65,7 +76,7 @@
       <div class="item-conteiner">
         <div class="title"><h4>...</h4></div>
         <div class="content" style="flex-direction:column; align-items:center;">
-          <img src="./src/assets/working1.gif" alt="working" style="height:200px; width:auto;">
+          <img src={basesource+"working1.gif"} alt="working" style="height:200px; width:auto;">
           <a href="https://github.com/Torkildef"><h3>GitHub</h3></a>
         </div>
       </div>
@@ -127,6 +138,8 @@
   }
 
   img{
+    max-width: 50vw;
+    max-height: 50vw;
     height: 300px;
     width: 300px;
     margin: 5px;
