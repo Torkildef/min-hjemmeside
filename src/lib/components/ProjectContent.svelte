@@ -1,6 +1,6 @@
 <script>
   import DetaliedProject from "./DetaliedProject.svelte";
-  let basesource = "https://raw.githubusercontent.com/Torkildef/min-hjemmeside/master/src/assets/"
+  let basesource = "./src/assets/"
 
   let prevProjectList = [
     {id: 1, 

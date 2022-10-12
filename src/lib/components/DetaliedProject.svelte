@@ -2,7 +2,7 @@
     export let currItem = null
     import {createEventDispatcher} from 'svelte';
 
-    let basesource = "https://raw.githubusercontent.com/Torkildef/min-hjemmeside/master/src/assets/"
+    let basesource = "./src/assets/"
 
     const dispatch = createEventDispatcher()
     
@@ -10,27 +10,26 @@
         dispatch("showAll",0)
       }     
 </script>
-
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
     <div id="selected-item">
       <div id="selected-item-title">
-        <button on:click={showAll}>X</button>
-        <div></div>
+        <button on:click={showAll}><i class="material-icons">arrow_back</i></button>
         <h4>{currItem.name}</h4>
-        <div></div>
+        {#if currItem.link}
+          <a href={currItem.link}><img id="github-icon" src={basesource + "github_icon.png"} alt="Github icon">GitHub</a>
+        {/if}
       </div>
 
       <div class="content">
         <p>{currItem.description + currItem.descriptionExtended}</p>
-
-    <div id="img-conteiner">
-        {#each currItem.img as x}
-            <img src={basesource + x} alt="{currItem.name}">
-        {/each}
-    </div>
-    {#if currItem.link}
-    <a href={currItem.link}>GitHub link</a>
-    {/if}
-    </div>
+        <div id="img-conteiner">
+            {#each currItem.img as x}
+              <img src={basesource + x} alt="{currItem.name}">
+            {/each}
+        </div>
+      </div>
     </div>
 
 
@@ -55,7 +54,7 @@
     text-align: center;
     background-color:#7895B2;
     display: grid;
-    grid-template-columns: 1fr 5fr 10fr 6fr;
+    grid-template-columns: 50px 1fr 50px;
   }
 
   #selected-item-title button{
@@ -87,16 +86,24 @@
     line-height: 1.3em;
   }
 
-
-
-
   #img-conteiner{
     display: block;
     flex-wrap: wrap;
   }
+
   img{
     margin: 5px;
     border-radius: 5px;
     height: 300px;
+  }
+
+  #selected-item-title a{
+    align-self: center;
+  }
+
+  #github-icon{
+    height: 30px;
+    width: 30px;
+    margin: 0px;
   }
 </style>
