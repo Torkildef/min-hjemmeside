@@ -2,9 +2,7 @@
   import ProjectContent from './lib/components/ProjectContent.svelte';
   import AboutMe from './lib/components/AboutMe.svelte';
 
-
-  let view = "projectView"
-
+  let view = "aboutMeView"
 
 </script>
 
@@ -13,31 +11,35 @@
     <div id="header-content">
         <h3>Torkild Finne</h3>
         <div id="header-options">
-          <h4 on:click={()=>view = "projectView"}>Mine prosjekter</h4>
-          <h4 on:click={()=>view = "aboutMeView"}>Om meg</h4>
+          <h4 on:click={()=>view = "projectView"}>Prosjekter</h4>
+          <h4 on:click={()=>view = "aboutMeView"}>Litt om meg</h4>
         </div>
     </div>
   </header>
-  {#if view == "projectView"}
+  <div id="content">
+    {#if view == "projectView"}
     <ProjectContent/>
-  {:else}
-    <AboutMe/>
-  {/if}
-
+    {:else}
+      <AboutMe/>
+    {/if}
+  </div>
 </div>
-  
-  
 
 
 <style>
 
   #main{
+    --primary-color:#E8DFCA;
+		--secondary-color:#F5EFE6;
+		--color3: #AEBDCA;
+    --color4: #7895B2;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: #F5EFE6;
+    background-color: var(--primary-color);;
   }
 
   header{
@@ -47,7 +49,8 @@
     width: 100%;
     min-height: 60px;
     box-shadow: 0 3px 5px -2px rgba(57, 63, 72, 0.3);
-    background-color: #AEBDCA;
+    background-color: var(--color3);
+    z-index: 2;
     }
 
   #header-content{
@@ -79,7 +82,5 @@
     text-decoration: underline;
     cursor: pointer;
   }
-
-
 
 </style>

@@ -2,7 +2,7 @@
     export let currItem = null
     import {createEventDispatcher} from 'svelte';
 
-    let basesource = "./src/assets/"
+    let basesource = "./"
 
     const dispatch = createEventDispatcher()
     
@@ -18,7 +18,7 @@
         <button on:click={showAll}><i class="material-icons">arrow_back</i></button>
         <h4>{currItem.name}</h4>
         {#if currItem.link}
-          <a href={currItem.link}><img id="github-icon" src={basesource + "github_icon.png"} alt="Github icon">GitHub</a>
+          <a href={currItem.link}><img id="github-icon" src={basesource + "logos/github-logo.png"} alt="Github icon">GitHub</a>
         {/if}
       </div>
 
@@ -41,7 +41,7 @@
     width: 100%;
     margin: 5px;
     padding: 5px;
-    background-color:#7895B2;
+    background-color:var(--color4);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     display: flex;
@@ -52,7 +52,7 @@
     font: "Fira Sans", sans-serif;
     height: 60px;
     text-align: center;
-    background-color:#7895B2;
+    background-color:var(--color4);
     display: grid;
     grid-template-columns: 50px 1fr 50px;
   }
@@ -65,7 +65,7 @@
     cursor: pointer;
   }
   #selected-item-title button:hover{
-    color: #AEBDCA;
+    color: var(--color3);
   }
 
   .content{
@@ -74,7 +74,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 5px;
-    background-color: #E8DFCA;
+    background-color: var(--secondary-color);
     flex-grow: 1;
     border-radius: 3px;
   }

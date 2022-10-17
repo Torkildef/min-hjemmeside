@@ -1,6 +1,6 @@
 <script>
   import DetaliedProject from "./DetaliedProject.svelte";
-  let basesource = "./src/assets/"
+  let basesource = "./"
 
   let prevProjectList = [
     {id: 1, 
@@ -40,14 +40,14 @@
     name: "Ordspill", 
     description:"Lite ordspill som ligner på hangman der programmet skal finne ut et ord på førrest mulig forsøk.",
     descriptionExtended:" Programmet bruker en ordliste og itererer over den. Basert på input fra brukeren prøver algoritmen å gjette på bokstaven som det er minst sjanse for å gjette feil på.", 
-    img:["python-logo.png"],
+    img:["logos/python-logo.png"],
     link:"https://github.com/Torkildef/ordspill"},
 
     {id: 5, 
     name: "Medlingstjeneste", 
     description:"Eksamensoppgave i faget IN2140 - Introduksjon til operativsystemer og datakommunikasjon. Programmet er en medlingstjeneste mellom klienter.",
     descriptionExtended:" Består av klienter og en server der klientene bruker en server for å finne en annen klient å kominisere med. ", 
-    img:["c-logo.png"],
+    img:["logos/c-logo.png"],
     link:"https://github.com/Torkildef/skoleprosjekter/tree/main/meldingstjeneste"},
     
   ];
@@ -61,10 +61,10 @@
 
 <div id="content-conteiner">
   {#if currItem}
-<DetaliedProject currItem = {currItem} on:showAll={()=>currItem = null}></DetaliedProject>
+  <DetaliedProject currItem = {currItem} on:showAll={()=>currItem = null}></DetaliedProject>
   {:else}
     {#each prevProjectList as item}
-        <div on:click={()=>showOne(item)} class="item-conteiner">
+        <div on:click={()=>showOne(item)} class="item-conteiner" id={item.id.toString()}>
           <div class="title"><h4>{item.name}</h4></div>
           <div class="content">
             <p>{item.description}</p> 
@@ -98,10 +98,11 @@
   .item-conteiner{
     max-height: 400px;
     overflow-y: auto;
-    width: 580px;
+    max-width: 580px;
+    width: 100%;
     margin: 5px;
     padding: 5px;
-    background-color: #AEBDCA;
+    background-color: var(--color3);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     display: flex;
@@ -109,7 +110,7 @@
   }
 
   .item-conteiner:hover{
-    background-color: #7895B2;
+    background-color:var(--color4);
     cursor: pointer;
   }
 
@@ -118,14 +119,14 @@
     font: "Fira Sans", sans-serif;
     height: 60px;
     text-align: center;
-    background-color:#7895B2;
+    background-color:var(--color4);
     border-radius: 3px;
   }
 
   .content{
     display: flex;
     margin-top: 5px;
-    background-color: #E8DFCA;
+    background-color: var(--secondary-color);
     flex-grow: 1;
     border-radius: 3px;
   }
