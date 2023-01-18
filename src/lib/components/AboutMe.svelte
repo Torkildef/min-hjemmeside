@@ -4,14 +4,15 @@
   let logosurce = "./logos/"
 
   let codeImages = [
-    {name: "C", img: "c-logo.png"},
     {name: "Python", img: "python-logo.png"},
     {name: "Java", img: "java-logo.png"},
     {name: "Kotlin", img: "kotlin-logo.png"},
+    {name: "C", img: "c-logo.png"},
     {name: "JavaScript", img: "javascript-logo.png"},
     {name: "HTML", img: "html-logo.png"},
     {name: "CSS", img: "css-logo.png"},
     {name: "Svelte", img: "svelte.svg"},
+    {name: "Scheme", img: "scheme-logo.svg"},
   ]
 
   let sosials = [
@@ -35,20 +36,21 @@
     {code:"IN2040", name: "Funksjonell programmering", link:"https://www.uio.no/studier/emner/matnat/ifi/IN2040/", onGoing: true},
     {code:"IN2030", name: "Prosjektoppgave i programering", link:"https://www.uio.no/studier/emner/matnat/ifi/IN2030/", onGoing: true},
     {code:"IN3110", name: "Problemløsning med høynivå-språk", link:"https://www.uio.no/studier/emner/matnat/ifi/IN3110/", onGoing: true},
-]
-
+]  
 
   const animationBox = {width: 0, height: 0};
   codeImages.forEach((item) => {
-    item.speedx = Math.random() * 0.5 - 0.5;
-    item.speedy = Math.random() * 0.5 - 0.5;
+    // random number between 0.5 and 1.5
+    item.speedx = Math.random() * 0.5 + 0.5;
+    item.speedy = Math.random() * 0.5 + 0.5;
     item.x = Math.random() * 500;
     item.y = Math.random() * 300;
     item.size = 50;
 
   })
 
-  setInterval(animation, 10);
+  // animation loop for the codeImages with interval 16ms (60fps)
+  setInterval(animation, 16);
   function animation(){
     let box = document.getElementById("logo-animation")
     animationBox.width = box.clientWidth
@@ -96,8 +98,8 @@
     <p>Hei! Mitt navn er Torkild Engen Finne. Jeg er en 23 år gammel utvikler som går 3-året 
       på <a href="https://www.uio.no/studier/program/informatikk-programmering/">Informatikk
       - programmering og systemarkitektur</a> ved universitetet i Oslo. Ved siden av studiene
-      er jeg en aktiv person som liker friluft og fart og spenning. Tidligere har jeg også 
-      satset alpint på nasjonalt nivå. Jeg har erfaring med IT-utivkling gjennom sommerjobb i DIPS AS. 
+      er jeg en aktiv person som liker friluft, fart og spenning. Tidligere har jeg også 
+      satset alpint på nasjonalt nivå og jobber fortiden som alpintrener i Kjelsås. Jeg har erfaring med IT-utivkling gjennom sommerjobb i DIPS AS. 
       Jeg har også jobbet som postbud, resepsjonist og tilbrakt et år i førstegangstjenesten. 
       Kontakt meg gjerne gjennom <a href="https://www.linkedin.com/in/torkild-finne-aa1760251/">linkedin</a>.
     </p>
@@ -115,9 +117,9 @@
         style="
             max-width: {img.size}px;
             max-height: {img.size}px;
-            left:{Math.round(img.x)}px;
-            top:{Math.round(img.y)}px;">
-            {/each}
+            left:{Math.round(img.x*10)/10}px;
+            top:{Math.round(img.y*10)/10}px;">
+        {/each}
       </div>
 
       <table id="code-list">
@@ -129,6 +131,7 @@
         <tr><td>Svelte</td></tr>
         <tr><td>C</td></tr>
         <tr><td>SQL</td></tr>
+        <tr><td>Scheme</td></tr>
       </table>
     </div>
 
