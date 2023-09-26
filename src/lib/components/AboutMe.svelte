@@ -13,6 +13,8 @@
     {name: "CSS", img: "css-logo.png"},
     {name: "Svelte", img: "svelte.svg"},
     {name: "Scheme", img: "scheme-logo.svg"},
+    {name: "Power Platform", img: "power-logo.png"},
+    {name: "React", img: "react-logo.webp"},
   ]
 
   let sosials = [
@@ -33,9 +35,18 @@
     {code:"IN2120", name: "Informasjonssikkerhet", link:"https://www.uio.no/studier/emner/matnat/ifi/IN2120/"},
     {code:"IN2000", name: "Software Engineering med prosjektarbeid", link:"https://www.uio.no/studier/emner/matnat/ifi/IN2000/"},
     {code:"IN2140", name: "Introduksjon til operativsystemer og datakommunikasjon", link:"https://www.uio.no/studier/emner/matnat/ifi/IN2140/"},
-    {code:"IN2040", name: "Funksjonell programmering", link:"https://www.uio.no/studier/emner/matnat/ifi/IN2040/", onGoing: true},
-    {code:"IN2030", name: "Prosjektoppgave i programering", link:"https://www.uio.no/studier/emner/matnat/ifi/IN2030/", onGoing: true},
-    {code:"IN3110", name: "Problemløsning med høynivå-språk", link:"https://www.uio.no/studier/emner/matnat/ifi/IN3110/", onGoing: true},
+    {code:"IN2040", name: "Funksjonell programmering", link:"https://www.uio.no/studier/emner/matnat/ifi/IN2040/"},
+    {code:"IN2030", name: "Prosjektoppgave i programering", link:"https://www.uio.no/studier/emner/matnat/ifi/IN2030/"},
+    {code:"IN3110", name: "Problemløsning med høynivå-språk", link:"https://www.uio.no/studier/emner/matnat/ifi/IN3110/"},
+    {code:"IN3050", name: "Introduction to Artificial Intelligence and Machine Learning", link:"https://www.uio.no/studier/emner/matnat/ifi/IN3050/v23/index.html", onGoing: true},
+    {code:"IN3030", name: "Effektiv parallellprogrammering", link:"https://www.uio.no/studier/emner/matnat/ifi/IN3030/index.html"},
+    {code:"IN3240", name: "Testing av programvare", link:"https://www.uio.no/studier/emner/matnat/ifi/IN3240/index.html"},
+    {code:"IN4120", name: "Søketeknologi", link:"https://www.uio.no/studier/emner/matnat/ifi/IN3120/"},
+    {code:"IN5320", name: "Development in platform ecosystems", link:"https://www.uio.no/studier/emner/matnat/ifi/IN5320/index.html"},
+    {code:"IN5290", name: "Ethical Hacking", link:"https://www.uio.no/studier/emner/matnat/ifi/IN5290/"},
+
+
+
 ]  
 
   const animationBox = {width: 0, height: 0};
@@ -94,17 +105,17 @@
 
 <div id="content-conteiner">
   <div class="box-content" style="display: inline-block;" >
-    <img id="portrait" src="./selvportrett.jpg" alt="of me">   
-    <p>Hei! Mitt navn er Torkild Engen Finne. Jeg er en 23 år gammel utvikler som går 3-året 
-      på <a href="https://www.uio.no/studier/program/informatikk-programmering/">Informatikk
+    <img id="portrait" src="./selportrett3.png" alt="of me">   
+    <p><t>Hei!</t> Mitt navn er Torkild Engen Finne. Jeg er en 24 år gammel utvikler som går master 
+      på <a href="https://www.uio.no/studier/program/informatikk-programmering-master/">Informatikk
       - programmering og systemarkitektur</a> ved universitetet i Oslo. Ved siden av studiene
       er jeg en aktiv person som liker friluft, fart og spenning. Tidligere har jeg også 
-      satset alpint på nasjonalt nivå og jobber fortiden som alpintrener i Kjelsås. Jeg har erfaring med IT-utivkling gjennom sommerjobb i DIPS AS. 
-      Jeg har også jobbet som postbud, resepsjonist og tilbrakt et år i førstegangstjenesten. 
+      satset alpint på nasjonalt nivå. Jeg har erfaring med IT-utivkling gjennom sommerjobb i Netcompany og DIPS. 
+      Jeg har også jobbet som skitrener, postbud, resepsjonist og tilbrakt et år i førstegangstjenesten. 
       Kontakt meg gjerne gjennom <a href="https://www.linkedin.com/in/torkild-finne-aa1760251/">linkedin</a>.
     </p>
   </div>
-
+  
   
   <div class="box-content">
 
@@ -132,6 +143,8 @@
         <tr><td>C</td></tr>
         <tr><td>SQL</td></tr>
         <tr><td>Scheme</td></tr>
+        <tr><td>Power Platform</td></tr>
+        <tr><td>React</td></tr>
       </table>
     </div>
 
@@ -208,8 +221,10 @@
       margin-left: 20px;
     }
     
-
-    
+    p t{
+      font-size: 1.5em;
+      margin-right: 0.3em;
+    }
 
     #code-list{
       min-width: 230px;
@@ -249,6 +264,7 @@
       max-height: 50px;
       margin: 10px;
     }
+
 
 
     </style>
